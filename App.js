@@ -1,13 +1,18 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, SafeAreaView, FlatList } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "react-native-vector-icons";
+import BandList from "./components/bandlist";
+import metal from "./metal.json";
+import StatsList from "./components/stats";
+import StylesList from "./components/styles";
 
 function Bands() {
   return (
     <View style={styles.container}>
       <Text>Bands</Text>
+      <BandList />
     </View>
   );
 }
@@ -15,14 +20,14 @@ function Bands() {
 function Stats() {
   return (
     <View style={styles.container}>
-      <Text>Stats</Text>
+      <StatsList />
     </View>
   );
 }
 function Styles() {
   return (
     <View style={styles.container}>
-      <Text>Styles</Text>
+      <StylesList />
     </View>
   );
 }
